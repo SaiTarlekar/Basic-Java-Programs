@@ -1,34 +1,55 @@
 package com.packages.arrays;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ReadAndDisplay {
+	static Scanner scan = new Scanner(System.in);
 
-	
-	static int readArrays() {
+	static int[] readArrays(int size) {
+
+		int index = 0;
+		int[] array = new int[5];
 		
 		
-		
-		
-		return 1;
+		System.out.println("Enter Numbers (Press x to stop) : ");
+
+//		while (scan.nextInt() != 's') {
+//			array[index] = scan.nextInt();
+//		}
+
+		for (int i = 0; i<size; i++) {
+			array[i] = scan.nextInt();
+		}
+		return array;
 	}
-	
-	static void displayArrays() {
+
+	static void displayArrays(int[] array) {
 		
+		System.out.println("Entered Numbers are : ");
+		for (int num : array) {
+			System.out.println(num + " ");
+		}
 	}
-	
-	
+
 	public static void main(String args[]) {
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Hello!! \nDo you know size of the Array (Y/N): ");
-		char ch = scan.next().charAt(0);
+
+//		System.out.println("Hello!! \nDo you know size of the Array (Y/N): ");
+//		char ch = scan.next().charAt(0);
+		System.out.println("Enter Array Size : ");
+		int size = scan.nextInt();
+		try {
+			int[] array = readArrays(size);
+			displayArrays(array);
+		} 
 		
-		switch(ch) {
-		case 'Y':
-			break;
-		
-		case 'N':
-			break;
+		catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Array Index Out Of Bounds Error.");
 		}
 		
+		catch(InputMismatchException e) {
+			System.out.println("Input Mismatch Exception. Print only Integers");
+		}
+
 	}
 }
