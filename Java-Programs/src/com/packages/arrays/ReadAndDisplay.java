@@ -10,22 +10,17 @@ public class ReadAndDisplay {
 
 		int index = 0;
 		int[] array = new int[5];
-		
-		
+
 		System.out.println("Enter Numbers (Press x to stop) : ");
 
-//		while (scan.nextInt() != 's') {
-//			array[index] = scan.nextInt();
-//		}
-
-		for (int i = 0; i<size; i++) {
+		for (int i = 0; i < size; i++) {
 			array[i] = scan.nextInt();
 		}
 		return array;
 	}
 
 	static void displayArrays(int[] array) {
-		
+
 		System.out.println("Entered Numbers are : ");
 		for (int num : array) {
 			System.out.println(num + " ");
@@ -41,13 +36,13 @@ public class ReadAndDisplay {
 		try {
 			int[] array = readArrays(size);
 			displayArrays(array);
-		} 
-		
+		}
+
 		catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("Array Index Out Of Bounds Error.");
 		}
-		
-		catch(InputMismatchException e) {
+
+		catch (InputMismatchException e) {
 			System.out.println("Input Mismatch Exception. Print only Integers");
 		}
 
