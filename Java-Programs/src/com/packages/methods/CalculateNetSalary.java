@@ -46,7 +46,7 @@ public class CalculateNetSalary {
         // Calculate M.A. and P.F. based on provided percentages
 		double ma = (5.0 / 100) * salary;
 		double pf = (25.0 / 100) * salary;
-
+		  
         // Create an instance of Deductions with calculated values
 		return new Deductions(ma, pf);
 	}
