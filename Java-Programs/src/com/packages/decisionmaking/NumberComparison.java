@@ -12,6 +12,7 @@ public class NumberComparison {
 			System.out.print("Number2 is Greater");
 	}
 	
+	
 	public static void main(String args[]) {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter First Number : ");
