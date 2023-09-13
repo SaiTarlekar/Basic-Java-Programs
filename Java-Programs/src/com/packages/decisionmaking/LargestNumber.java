@@ -7,11 +7,19 @@ public class LargestNumber {
 
 	static void findLargestNumber(int firstNumber, int secondNumber, int thirdNumber) {
 
-		if ((firstNumber == secondNumber) && (secondNumber == thirdNumber)) {
+		boolean equalNumbers = (firstNumber == secondNumber) && (secondNumber == thirdNumber);
+		
+		boolean firstUnique = (secondNumber == thirdNumber) && (secondNumber != firstNumber);
+		boolean secondUnique = (firstNumber == thirdNumber) && (firstNumber != secondNumber);
+		boolean thirdUnique = (firstNumber == secondNumber) && (secondNumber != thirdNumber);
+		
+		
+		
+		if (equalNumbers) {
 			System.out.println("All three Numbers are Equal.");
 		}
 
-		else if ((firstNumber == secondNumber) && (secondNumber != thirdNumber)) {
+		else if (thirdUnique) {
 			if (firstNumber > thirdNumber)
 				System.out.println("First Number (" + firstNumber + ") & Second Number (" + secondNumber + ") "
 						+ "are same and largest.");
@@ -19,7 +27,7 @@ public class LargestNumber {
 				System.out.println("Third Number (" + thirdNumber + ") is largest.");
 		}
 
-		else if ((secondNumber == thirdNumber) && (firstNumber != secondNumber)) {
+		else if (firstUnique) {
 			if (thirdNumber > firstNumber)
 				System.out.println("Second Number (" + secondNumber + ") & Third Number (" + thirdNumber + ") "
 						+ "are same and largest.");
@@ -27,7 +35,7 @@ public class LargestNumber {
 				System.out.println("First Number (" + firstNumber + ") is largest.");
 		}
 
-		else if ((firstNumber == thirdNumber) && (firstNumber != secondNumber)) {
+		else if (secondUnique) {
 			if (firstNumber > secondNumber)
 				System.out.println("First Number (" + firstNumber + ") & Third Number (" + thirdNumber + ") "
 						+ "are same and largest.");
@@ -77,3 +85,51 @@ public class LargestNumber {
  * firstNumber : thirdNumber) : ((secondNumber > thirdNumber) ? secondNumber :
  * thirdNumber);
  */
+
+
+
+/*
+
+if ((firstNumber == secondNumber) && (secondNumber == thirdNumber)) {
+			System.out.println("All three Numbers are Equal.");
+		}
+
+		else if ((firstNumber == secondNumber) && (secondNumber != thirdNumber)) {
+			if (firstNumber > thirdNumber)
+				System.out.println("First Number (" + firstNumber + ") & Second Number (" + secondNumber + ") "
+						+ "are same and largest.");
+			else
+				System.out.println("Third Number (" + thirdNumber + ") is largest.");
+		}
+
+		else if ((secondNumber == thirdNumber) && (firstNumber != secondNumber)) {
+			if (thirdNumber > firstNumber)
+				System.out.println("Second Number (" + secondNumber + ") & Third Number (" + thirdNumber + ") "
+						+ "are same and largest.");
+			else
+				System.out.println("First Number (" + firstNumber + ") is largest.");
+		}
+
+		else if ((firstNumber == thirdNumber) && (firstNumber != secondNumber)) {
+			if (firstNumber > secondNumber)
+				System.out.println("First Number (" + firstNumber + ") & Third Number (" + thirdNumber + ") "
+						+ "are same and largest.");
+			else
+				System.out.println("Second Number (" + secondNumber + ") is largest.");
+		}
+
+		else {
+			if (firstNumber > secondNumber) {
+				if (firstNumber > thirdNumber)
+					System.out.println("First Number is largest.");
+				else
+					System.out.println("Third Number is largest.");
+			} else {
+				if (secondNumber > thirdNumber)
+					System.out.println("Second Number is largest.");
+				else
+					System.out.println("Third Number is largest.");
+			}
+		}
+
+*/
