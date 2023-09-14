@@ -30,7 +30,7 @@ public class SmallestNumberUsingArray {
 
 		System.out.println("Smallest Number : ");
 		for (Map.Entry<Integer, Integer> entry : smallestElements.entrySet()) {
-			System.out.println("Index(" + entry.getKey() + ") : " + entry.getValue());
+			System.out.println("Index(" + entry.getKey() + ") : value(" + entry.getValue()+")");
 		}
 	}
 

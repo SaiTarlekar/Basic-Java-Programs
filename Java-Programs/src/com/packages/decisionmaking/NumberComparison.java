@@ -21,6 +21,6 @@ public class NumberComparison {
 		System.out.println("Enter Second Number : ");
 		int number2 = scan.nextInt();
 		checkNumberPositivity(number1, number2);
-		
+		scan.close();
 	}
 }
