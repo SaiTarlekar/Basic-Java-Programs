@@ -1,4 +1,4 @@
-package com.packages.arrays;
+package com.prowings.arrays;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

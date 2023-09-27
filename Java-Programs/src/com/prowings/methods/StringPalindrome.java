@@ -1,4 +1,4 @@
-package com.packages.methods;
+package com.prowings.methods;
 import java.util.Scanner;
 
 public class StringPalindrome {

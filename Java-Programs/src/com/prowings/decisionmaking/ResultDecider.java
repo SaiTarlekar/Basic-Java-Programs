@@ -1,4 +1,4 @@
-package com.packages.decisionmaking;
+package com.prowings.decisionmaking;
 
 import java.util.Scanner;
 
