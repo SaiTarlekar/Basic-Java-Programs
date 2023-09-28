@@ -18,12 +18,7 @@ public class ResultDecider {
 	public static void main(String[] args) {
 		System.out.println("Enter Marks : ");
 		float marks = scan.nextFloat();
-		
-		int x = 150;
-		byte b = (byte) x;
-		
-		System.out.println(b);
-//		resultDecider(marks);
+		resultDecider(marks);
 
 	}
 }
