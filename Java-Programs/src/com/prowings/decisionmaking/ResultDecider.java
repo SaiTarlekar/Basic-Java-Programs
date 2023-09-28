@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class ResultDecider {
 	static Scanner scan = new Scanner(System.in);
 
+	
+
 	static void resultDecider(float marks) {
 		if (marks >= 35 && marks <= 100)
 			System.out.println("Pass");
