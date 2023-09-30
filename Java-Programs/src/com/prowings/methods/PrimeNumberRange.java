@@ -37,11 +37,12 @@ public class PrimeNumberRange {
 				primeNumber.add(i);
 			}
 		}
+		
+	
 
-		System.out.println("Length of array : " + primeNumber.size());
-
+		System.out.println("Prime Numbers between "+startRange+ " and "+endRange+ " are :");
 		for (int num : primeNumber) {
-			System.out.println(num);
+			System.out.print(num+ " ");
 		}
 
 	}
