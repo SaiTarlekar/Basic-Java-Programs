@@ -24,7 +24,7 @@ public class ElevatorProblem {
 		try {
 			int checkFloor = scan.nextInt();
 			// Verifying if the entered floor number is between the limit of building.
-			if(checkFloor>=0 && checkFloor<=1000)
+			if(checkFloor>=MIN_FLOOR && checkFloor<=MAX_FLOOR)
 				currentFloor = checkFloor;
 			else
 				throw new IllegalArgumentException("Input must be between 0 and 1000(Inclusive)");
