@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class PrimeNumberCheck {
 
-	
 	private static Scanner scan = new Scanner(System.in);
 	
 	public PrimeNumberCheck() {}
