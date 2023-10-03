@@ -8,7 +8,7 @@ public class ReadAndDisplay {
 
 	static int[] readArrays(int size) {
 
-		int index = 0;
+//		int index = 0;
 		int[] array = new int[5];
 
 		System.out.println("Enter Numbers (Press x to stop) : ");

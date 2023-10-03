@@ -43,6 +43,6 @@ public class LargestNumberUsingArray {
 			numbers.add(scan.nextInt());
 
 		largestNumber(numbers);
-
+		scan.close();
 	}
 }
