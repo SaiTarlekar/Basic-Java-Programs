@@ -36,7 +36,7 @@ public class ArrayReversal {
 		int[] reversedArray = arrayReversal(array);
 		System.out.println("Reversed Array : ");
 		for(int n:reversedArray) {
-			System.out.println(n+ " ");
+			System.out.print(n+ " ");
 		}
 	}
 
