@@ -58,7 +58,7 @@ public class EvenOddArrays {
 		int[] evenNumbers = getEvenOddArrays(array, size)[0];
 		int[] oddNumbers = getEvenOddArrays(array, size)[1];
 		
-		System.out.println("Even Numbers : ");
+		System.out.println("\n\nEven Numbers : ");
 		for(int n : evenNumbers)
 			System.out.print(n+ " ");
 		
