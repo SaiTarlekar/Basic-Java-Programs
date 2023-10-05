@@ -14,7 +14,27 @@ public class AdditionOfArrays {
 			System.out.print(n + " ");
 	}
 
-	static int[] mergeArray(int[] additionOfArray, int[] nums, int nums1[], int size) {
+	private static int[] additionOfArray(int[] nums, int[] nums1) {
+
+		int size = (nums.length > nums1.length) ? nums.length : nums1.length;
+		int[] additionOfArray = new int[size];
+
+		for (int i = 0; i < size; i++) {
+			int number1 = (i < nums.length) ? nums[i] : 0;
+			int number2 = (i < nums1.length) ? nums1[i] : 0;
+			additionOfArray[i] = number1 + number2;
+		}
+
+		return additionOfArray;
+	}
+
+}
+
+
+
+/*
+ * 
+ static int[] mergeArray(int[] additionOfArray, int[] nums, int nums1[], int size) {
 		int[] mergedArray = additionOfArray;
 		for (int i = nums.length; i < size; i++) {
 			mergedArray[i] = nums1[i];
@@ -45,5 +65,5 @@ public class AdditionOfArrays {
 
 		return result;
 	}
-
-}
+ * 
+ */
