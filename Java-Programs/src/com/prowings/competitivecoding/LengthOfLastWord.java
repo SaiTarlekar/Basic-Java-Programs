@@ -7,23 +7,22 @@ public class LengthOfLastWord {
 	
 	public static int lengthOfLastWord(String s) {
 		
-		String[] array = s.split(" ");
+		String[] array = s.split("\\s+");
 		
-		for(String k: array)
-			System.out.println(k);
+		String lastWord = array[array.length-1];
+		int lengthOfLastWord = lastWord.length();
+
 		
-//		char[] charArray = array[array.length].toCharArray();
-		int count=0;
-//		for(int i=0; i<charArray.length; i++) {
-//			count++;
-//		}
 		
-		return count;
+		return lengthOfLastWord;
 	}
 	
 	public static void main(String[] args) {
-		String s = "Hello World";
+		String s = "Sai Sanjay       Tarlekar";
 		System.out.println(lengthOfLastWord(s));
 	}
 
 }
+
+
+
