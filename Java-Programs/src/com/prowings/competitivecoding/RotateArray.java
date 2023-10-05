@@ -1,33 +1,14 @@
-// Rotate an array of n elements to the right by k steps.
-package com.prowings.arrays;
+package com.prowings.competitivecoding;
 
 import java.util.Scanner;
 
 public class RotateArray {
-	private static Scanner scan = new Scanner(System.in);
-	public RotateArray() {}
 
-	private static int[] rotateArray(int[] nums, int k, int size) {
-		int[] rotatedArray = new int[size];
-		
-//		for(int i=0; i<size; i++) {
-//			for(int j=k; j<size; j++) {
-//				rotatedArray[j] = nums[i];
-//				if(k == size-1)
-//					j=0;
-//				
-//			}
-//		}
-		
-		
-		
-		
-		
-		
-		return rotatedArray;
+	private static Scanner scan = new Scanner(System.in);
+
+	public RotateArray() {
 	}
 
-	
 	public static void main(String[] args) {
 		System.out.println("Enter Size of Array : ");
 		int size = scan.nextInt();
@@ -39,16 +20,33 @@ public class RotateArray {
 			System.out.print("nums[" + (i + 1) + "] : ");
 			nums[i] = scan.nextInt();
 		}
-	
+
 		System.out.println("Enter value to rotate the array : ");
 		int k = scan.nextInt();
-		
-		
-		
+
 		int[] result = rotateArray(nums, k, size);
-		for(int n : result)
-			System.out.print(n+ " ");
+		for (int n : result)
+			System.out.print(n + " ");
 	}
 
+	public static int[] rotateArray(int[] nums, int k, int size) {
+
+		int[] reverseArray = new int[size];
+		for (int i = 0; i < k; i++) {
+			reverseArray = leftShiftArray(nums);
+		}
+
+		return reverseArray;
+	}
+
+	public static int[] leftShiftArray(int[] nums) {
+
+		int temp = nums[0];
+		for (int i = 1; i < nums.length; i++) {
+			nums[i - 1] = nums[i];
+		}
+		nums[nums.length - 1] = temp;
+		return nums;
+	}
 
 }
