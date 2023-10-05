@@ -7,20 +7,15 @@ public class ArrayEquality {
 
 	static boolean checkEquality(int[] nums, int[] nums1) {
 
-		boolean isEqual = false;
 
 		if (nums.length == nums1.length) {
 			for (int i = 0; i < nums.length; i++) {
-				if (nums[i] == nums1[i]) {
-					isEqual = true;
-				} else {
-					isEqual = false;
-					return isEqual;
-				}
+				if (nums[i] != nums1[i])
+					return false;
 			}
 		}
 
-		return isEqual;
+		return true;
 
 	}
 
