@@ -21,25 +21,19 @@ public class SelectionSort {
 			nums[smallest] = nums[i];
 			nums[i] = temp;
 		}
-		return null;
+		return nums;
 	}
 
 	
-	
-	
 	public static void main(String[] args) {
-		System.out.println("Enter Size of Array : ");
-		int size = scan.nextInt();
-		int[] nums = new int[size];
-		System.out.println("Enter Numbers : ");
-		for (int i = 0; i < size; i++) {
-			System.out.print("nums[" + (i + 1) + "] : ");
-			nums[i] = scan.nextInt();
-		}
+		
+		int[] nums = {10, 30, 50, 23, 18, 34, 5, 8};
+		
 		int[] sortedArray = sortingArray(nums);
 		for (int n : nums) {
 			System.out.print(n + " ");
 		}
+		scan.close();
 	}
 
 }
