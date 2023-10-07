@@ -1,4 +1,6 @@
 // Given an nums of integers, find all the elements that appear more than once in the nums.
+// Write a Java program to find duplicate values in an array of integer values.
+
 package com.prowings.arrays;
 
 import java.util.ArrayList;

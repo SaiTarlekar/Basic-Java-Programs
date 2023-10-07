@@ -1,3 +1,5 @@
+// Write a Java program to find the second largest element in an array.
+
 package com.prowings.arrays;
 
 import java.util.Arrays;

@@ -5,8 +5,7 @@ import java.util.List;
 
 public class UniqueElements {
 
-	public UniqueElements() {
-	}
+	public UniqueElements() {}
 
 	public static int[] findUniqueElements(int[] nums) {
 
