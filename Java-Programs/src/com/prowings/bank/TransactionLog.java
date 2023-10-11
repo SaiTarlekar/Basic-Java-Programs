@@ -1,14 +1,23 @@
 package com.prowings.bank;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TransactionLog {
 
+	private List<String> log;
+
 	public TransactionLog() {
-		// TODO Auto-generated constructor stub
+		this.log = new ArrayList<>();
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public void logTransaction(String transaction) {
+		log.add(transaction);
+	}
 
+	public void printTransactions() {
+		for (String entry : log)
+			System.out.println(entry);
 	}
 
 }
