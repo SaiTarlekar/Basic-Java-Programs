@@ -3,19 +3,19 @@ package com.prowings.competitivecoding;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Trial {
+public class AcronymOfWords {
 
-	public Trial() {}
+	public AcronymOfWords() {}
 
 	public static void main(String args[]) {
 
 		List<String> words = new ArrayList<>();
 
-		words.add("alice");
-		words.add("bob");
-		words.add("charlie");
+		words.add("w");
+		words.add("eshensjifo");
+//		words.add("charlie");
 
-		String s = "abc";
+		String s = "ez";
 
 		if (isAcronym(words, s))
 			System.out.println("Yes");
@@ -35,7 +35,8 @@ public class Trial {
 					counter++;
 					flag = true;
 				} else
-					flag = false;
+					return false;
+					
 			}
 		if (flag)
 			return true;
