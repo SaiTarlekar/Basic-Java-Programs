@@ -24,8 +24,8 @@ public abstract class BankTransaction {
 		this.balance = balance;
 	}
 
-	public void moneyWithdraw(double amount) throws InvalidWithdrawalExceptions, InsufficientBalanceExceptions {};
+	public abstract void moneyWithdraw(double amount) throws InvalidWithdrawalExceptions, InsufficientBalanceExceptions ;
 
-	public void moneyDeposit(double amount) throws InsufficientBalanceExceptions {}
+	public abstract void moneyDeposit(double amount) throws InsufficientBalanceExceptions;
 
 }
