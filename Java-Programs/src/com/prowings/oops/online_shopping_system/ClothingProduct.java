@@ -5,8 +5,7 @@ class ClothingProd extends Product {
 	private int productSize;
 	private String productColor;
 
-	public ClothingProd() {
-	}
+	public ClothingProd() {}
 
 	public ClothingProd(String prodName, double prodPrice, String prodDescription, int productSize,
 			String productColor) {
@@ -22,6 +21,7 @@ class ClothingProd extends Product {
 		System.out.println("Product Description : " + prodDescription);
 		System.out.println("Product Size : " + productSize);
 		System.out.println("Product Color : " + productColor);
+		System.out.println();
 	}
 
 	public int getProductSize() {
@@ -39,9 +39,5 @@ class ClothingProd extends Product {
 	public void setProductColor(String productColor) {
 		this.productColor = productColor;
 	}
-
-	public void purchaseProd() {
-
-	}
-
+	
 }

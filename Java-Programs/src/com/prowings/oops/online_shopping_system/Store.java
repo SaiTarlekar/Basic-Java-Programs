@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Store{
-	private List<Product> availableProducts;
+	private static List<Product> availableProducts;
 
 
 	public Store(){
@@ -19,6 +19,11 @@ class Store{
 		System.out.println("Available Products in the Store are : ");
 		for(Product product : availableProducts)
 			product.productInfo();
+	}
+	
+	public static boolean isproductAvailable(Product product) {
+		
+		return availableProducts.contains(product);
 	}
 
 }

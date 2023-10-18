@@ -15,9 +15,7 @@ public class Addition {
 		int firstNumber = scan.nextInt();
 		System.out.println("Enter Second Number : ");
 		int secondNumber = scan.nextInt();
-
 		System.out.println("Addition of Entered Number is : " + doAddition(firstNumber, secondNumber));
-
 	}
 
 }

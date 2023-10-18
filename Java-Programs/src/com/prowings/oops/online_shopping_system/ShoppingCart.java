@@ -6,4 +6,5 @@ interface ShoppingCart{
 	public void removeFromCart(Product product);
 	public void showCart();
 	public double checkOut();
+
 }

@@ -4,9 +4,7 @@ class ElectronicProd extends Product {
 
 	private String warrantyCard;
 
-	public ElectronicProd() {
-
-	}
+	public ElectronicProd() {}
 
 	public ElectronicProd(String prodName, double prodPrice, String prodDescription, String wc) {
 		super(prodName, prodPrice, prodDescription);
@@ -19,6 +17,7 @@ class ElectronicProd extends Product {
 		System.out.println("Product Price : " + prodPrice);
 		System.out.println("Product Description : " + prodDescription);
 		System.out.println("Product Warranty : " + warrantyCard);
+		System.out.println();
 	}
 
 	public String getwarrantyCard() {
