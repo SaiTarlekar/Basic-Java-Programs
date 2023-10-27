@@ -34,9 +34,9 @@ public class ECommerceApp {
 		
 		Customer person1 = new Customer("Sai Tarlekar", "starlekar1@gmail.com");
 		
-//		person1.addToCart(shirt);
+		person1.addToCart(shirt);
 		person1.addToCart(laptop);
-		person1.addToCart(null);
+		person1.addToCart(earphones);
 		
 		person1.showCart();
 		System.out.println(person1.checkOut());
