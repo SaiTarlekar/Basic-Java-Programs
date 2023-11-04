@@ -6,7 +6,7 @@ import java.util.regex.*;
 
 public class MobileNumber {	
 	public static void main(String[] args) {
-		   System.out.println(validate("+917045916332"));		   
+		   System.out.println(validate("7045916332"));		   
 	   }
 	
 	public static String validate(String number) {
