@@ -7,7 +7,7 @@ public class PasswordValidation {
 	}
 
 	public static void main(String[] args) {
-		String s1 = "";
+		String s1 = "Pssw0rd";
 		
 		System.out.println(passwordValidate(s1));
 	}
@@ -27,18 +27,14 @@ public class PasswordValidation {
 					upper++;
 				if(Character.isLowerCase(s.charAt(i)))
 					lower++;
-				if("".indexOf(s) >= 1)
-					symbol++;
-				
-				
+				if("@$*&".indexOf(s.charAt(i)) >= 0)
+					symbol++;	
 			}
-			
-
-			
-			
-			return "Strong Password";
+			if(digit >= 1 && upper >= 1 && lower >= 1 && symbol >= 1)
+				return "Strong Password";
+			else
+				return "Weak Password";
 		}
-		
 		else
 			return "Weak Password";
 		
