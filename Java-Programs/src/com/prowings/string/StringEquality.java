@@ -20,11 +20,10 @@ public class StringEquality {
 
 	public static void main(String[] args) {
 		String s1 = "Sai";
-		String s2 = "sai";
+		StringBuffer s2 = new StringBuffer("Sai");
 
-		System.out.println(4 | 5);
-		
-		System.out.println(isEquals(s1, s2));
+		System.out.println(s1.contentEquals(s2));;		
+//		System.out.println(isEquals(s1, s2));
 	}
 
 }

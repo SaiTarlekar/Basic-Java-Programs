@@ -17,8 +17,7 @@ public class WordCount {
 	public static int wordCounter(String s) {
 
 		int wordCount = 0;
-		
-		
+
 //		String s1 = s.trim();
 //		char[] characters1 = s1.toCharArray();
 //		System.out.println(Arrays.toString(characters1));
@@ -27,11 +26,9 @@ public class WordCount {
 //				wordCount++;
 //		}
 //		return wordCount;
-		
-		
+
 		String[] s1 = s.split(" ");
 		return s1.length;
-		
 
 	}
 
