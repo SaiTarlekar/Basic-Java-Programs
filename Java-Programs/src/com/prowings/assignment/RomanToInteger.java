@@ -1,17 +1,48 @@
 package com.prowings.assignment;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class RomanToInteger {
 
 
 	public static void main(String[] args) {
-		System.out.println("Roman to Integer : " + romanToInteger("CXIV"));
-		System.out.println("Roman to Integer : " + romanToInteger1("CXIIV"));
+		Scanner scan = new Scanner(System.in);
+		String input = scan.next();
+		
+		if(romanNumberValidation(input)) {
+			System.out.println("Roman to Integer (Method 1) : " + romanToInteger2(input));
+//			System.out.println("Roman to Integer (Method 2) : " + romanToInteger1("CXIV"));			
+		}
+		
+		else
+			System.out.println("Invalid Roman Number");
+	}
+	
+	
+	public static boolean romanNumberValidation(String s) {
+		
+		s = s.trim().toUpperCase();
+		
+		
+		for(int i=0; i<s.length(); i++) {
+			char ch = s.charAt(i);
+			
+			if( ch!='I' && ch!='V' && ch!='X' && ch!='L' && ch!='C' && ch!='D' && ch!='M')
+				return false;
+		}
+		
+		if(s.matches(".*(IIII|XXXX|CCCC|MMMM|VV|LL|DD).*"))
+			return false;
+		
+		if(s.matches(".*II|.*VV.*|.*LL.*|.*DD.*|.*VX.*"))
+			return false;
+
+		return true;
 	}
 
 	
-	public static int romanToInteger1(String s) {
+	public static int romanToInteger2(String s) {
 		int result=0, currentValue=0, prevValue=0;
 		
 		for(int i=s.length()-1; i>=0; i--) {
@@ -25,7 +56,7 @@ public class RomanToInteger {
 				case 'C': currentValue = 100; break;
 				case 'D': currentValue = 500; break;
 				case 'M': currentValue = 1000; break;
-				default : System.out.println("Invalid Character : " +currentSymbol);
+//				default : System.out.println("Invalid Character : " +currentSymbol);
 			}
 			
 			if(currentValue < prevValue)
@@ -40,7 +71,7 @@ public class RomanToInteger {
 	}
 	
 	
-	public static int romanToInteger(String s) {
+	public static int romanToInteger1(String s) {
 		int result = 0, prevValue = 0;
 		HashMap<Character, Integer> romanValues = new HashMap<>();
 		
