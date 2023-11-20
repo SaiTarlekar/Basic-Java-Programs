@@ -35,7 +35,7 @@ public class RomanToInteger {
 		if(s.matches(".*(IIII|XXXX|CCCC|MMMM|VV|LL|DD).*"))
 			return false;
 		
-		if(s.matches(".*II|.*VV.*|.*LL.*|.*DD.*|.*VX.*"))
+		if(s.matches("II.*|.*VV.*|.*LL.*|.*DD.*|.*VX.*"))
 			return false;
 
 		return true;
