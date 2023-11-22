@@ -19,13 +19,19 @@ public class ReplaceCharacters {
 		System.out.println("Enter Character to be replaced by : ");
 		String replaceBy = scan.next();
 
+//		Method 1: Using replace()
 		System.out.println(replaceCharacter(input, toBeReplaced, replaceBy));
-		System.out.println(replaceCharacter(input, toBeReplaced, replaceBy));
+		
+		
+//		Method 2: Own Method
+		System.out.println(replaceCharacter1(input, toBeReplaced, replaceBy));
+		
+
+
 	}
 
 	public static String replaceCharacter(String s, String toBeReplaced, String replaceBy) {
-		s = s.replace(toBeReplaced, replaceBy);
-		return s;
+		return s.replace(toBeReplaced, replaceBy);
 	}
 
 	public static String replaceCharacter1(String s, String toBeReplaced, String replaceBy) {
@@ -41,4 +47,6 @@ public class ReplaceCharacters {
 
 		return new String(chars);
 	}
+	
+	
 }

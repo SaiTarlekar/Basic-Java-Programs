@@ -48,6 +48,9 @@ public class StringReverse {
 	}
 
 	
+	
+	
+	
 	/*
 	 * Take String as Input 
 	 * Create a new array for storing the characters in reverse
@@ -67,6 +70,9 @@ public class StringReverse {
 		return new String(reversedStringchars);
 	}
 	
+	
+	
+	
 	/*
 	 * Take String as input
 	 * Convert the String into array of characters
@@ -75,8 +81,6 @@ public class StringReverse {
 	 */
 	
 	public static String stringReverse3(String s) {
-		
-		
 		char[] chars = s.toCharArray();
 		
 		int i = 0;
@@ -90,12 +94,6 @@ public class StringReverse {
 			i++;
 			j--;
 		}
-		
-		
 		return new String(chars);
 	}
-	
-	
-	
-	
 }
