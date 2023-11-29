@@ -12,7 +12,10 @@ public class MergeAndRemoveDuplicates {
 		int[] arr1 = { 1, 2, 3 };
 		int[] arr2 = { 1, 2, 4, 5};
 
+//		Method 1
 		System.out.println(Arrays.toString(mergeUniqueElements1(arr1, arr2)));
+		
+//		Method 2
 		System.out.println(Arrays.toString(mergeUniqueElements2(arr1, arr2)));
 
 	}
