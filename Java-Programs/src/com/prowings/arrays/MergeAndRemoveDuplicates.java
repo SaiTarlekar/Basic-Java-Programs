@@ -13,7 +13,7 @@ public class MergeAndRemoveDuplicates {
 		int[] arr2 = { 1, 2, 4, 5};
 
 		System.out.println(Arrays.toString(mergeUniqueElements1(arr1, arr2)));
-//		System.out.println(Arrays.toString(mergeUniqueElements2(arr1, arr2)));
+		System.out.println(Arrays.toString(mergeUniqueElements2(arr1, arr2)));
 
 	}
 
@@ -23,7 +23,6 @@ public class MergeAndRemoveDuplicates {
 
 		System.arraycopy(arr1, 0, mergedArray, 0, arr1.length);
 		System.arraycopy(arr2, 0, mergedArray, arr1.length, arr2.length);
-		System.out.println(Arrays.toString(mergedArray));
 
 		boolean isUnique = false;
 		int counter = 0;
