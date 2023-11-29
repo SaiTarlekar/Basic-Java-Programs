@@ -20,8 +20,11 @@ public class StringReverse {
 		System.out.println("String After Reversal : " + stringReverse2(input));
 		
 //		Method 3
-		System.out.println("String After Reversal : " + stringReverse1(input));
+		System.out.println("String After Reversal : " + stringReverse3(input));
 
+//		Method 4 - Using StringBuffer
+		System.out.println("String After Reversal : " + stringReverse4(input));
+		
 	}
 
 	
@@ -96,4 +99,21 @@ public class StringReverse {
 		}
 		return new String(chars);
 	}
+	
+	
+	
+	public static String stringReverse4(String s) {
+
+		StringBuffer sb = new StringBuffer();
+		
+		for(int i=s.length()-1; i>=0; i--) {
+			sb.append(s.charAt(i));
+		}
+		
+		return new String(sb);
+	}
+
+	
+	
+	
 }
