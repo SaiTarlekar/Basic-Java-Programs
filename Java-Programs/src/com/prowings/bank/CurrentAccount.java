@@ -1,8 +1,12 @@
 package com.prowings.bank;
 
+import java.io.IOError;
+import java.io.IOException;
+import java.util.Scanner;
+
 public class CurrentAccount extends BankAccount {
 
-	
+	Scanner scan = new Scanner(System.in);
 	private double initialBalance;
 	private Customer customer;
 	private int accNo;
@@ -20,15 +24,18 @@ public class CurrentAccount extends BankAccount {
 			if(amount < 0)
 				throw new IllegalArgumentException("Amount can not be in negative.");
 			
-			else if(amount < getBalance())
-				throw new IllegalArgumentException("Withdrawing amount cannot be less than the balance.");
+			else if(amount > getBalance())
+				throw new IllegalArgumentException("Withdrawing amount cannot be more than the balance.");
 			
 			else
 				setBalance(getBalance() - amount); 
 		}
 		
-		catch(Exception e) {
+		catch(RuntimeException e) {
 			System.err.println("Error : " +e.getMessage());
+		}
+		finally {
+			scan.close();
 		}
 		
 	}
