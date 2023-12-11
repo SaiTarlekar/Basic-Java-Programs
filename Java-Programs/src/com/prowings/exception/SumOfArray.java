@@ -15,7 +15,7 @@ public class SumOfArray {
 		try {
 			while(scan.hasNext()) {
 				String num = scan.next();
-				if(num.equals("done"))
+				if(num.equalsIgnoreCase("done"))
 					break;
 				else if(num.matches("[0-9]+"))
 					sum += Integer.parseInt(num);
@@ -26,6 +26,10 @@ public class SumOfArray {
 		catch(IllegalArgumentException e) {
 			System.out.println(e.getMessage());
 		}
+		finally {
+			scan.close();
+		}
+		
 		
 		System.out.println("Sum = " +sum);
 		
