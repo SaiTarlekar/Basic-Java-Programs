@@ -11,38 +11,35 @@ import java.util.Scanner;
 
 public class DivisionCheck {
 
-	public DivisionCheck() {}
+	public static void main(String args[]) {
 
-	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		
-//		System.out.print("Enter first number : ");
-//		int num1 = scan.nextInt();
-//		
-//		System.out.print("Enter second number : ");
-//		int num2 = scan.nextInt();
-		
-		System.out.println("Result : " +divide(10, 0));
-		
+
+		System.out.println("Enter first number : ");
+		int num1 = validate(scan.nextInt());
+
+		System.out.println("Enter second number : ");
+		int num2 = validate(scan.nextInt());
+
+		System.out.println(num1 + "/" + num2 + " = " + divide(num1, num2));
+
 	}
 
-	public static int divide(int num1, int num2){
+	public static int divide(int num1, int num2) {
+		return num1 / num2;
+	}
 
-		int result = 0;
+	public static int validate(int num) {
 		try {
-//			result = (num1 / num2);
-			throw new ArithmeticException();
-		}
-		catch(ArithmeticException e) {
-			System.out.println("Message : " +e.getMessage() + "\nCause : " +e.getCause());
-			return result;
-		}
-		finally {
-			System.out.println("Clean up");
-		}
-		
-		
-		
-	}
+			if (num > 0)
+				return num;
+			else
+				throw new IllegalArgumentException("Please enter valid integer values.");
 
+		} catch (IllegalArgumentException e) {
+			System.out.println(e.getMessage());
+			System.exit(1);
+			return -1;
+		}
+	}
 }
