@@ -18,15 +18,11 @@ public class ShufflingElements {
         Random rand = new Random();
         int n = arr.length;
         for (int i = 0; i < n-1; i++) {
-             
             int j = rand.nextInt(i+1);
-             
             int temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
         }
-
         return arr;
 	}
-
 }
