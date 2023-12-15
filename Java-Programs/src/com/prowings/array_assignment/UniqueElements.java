@@ -21,29 +21,30 @@ public class UniqueElements {
 	}
 
 	public static int[] findUniqueElements(int[] nums) {
-
+		
 		int count = 0;
-		boolean flag = true;
+		boolean isUnique = false;
 		int[] array = new int[nums.length];
-		for (int i = 0; i < nums.length; i++) {
-			for (int j = i + 1; j < nums.length; j++) {
-				if (nums[i] != nums[j])
-					flag = true;
+		
+		for(int i=0; i<nums.length; i++) {
+			for(int j=0; j<nums.length; j++) {
+				if(nums[i] != array[j])
+					isUnique = true;
 				else {
-					flag = false;
+					isUnique = false;
 					break;
 				}
 			}
-			if (flag)
+			if(isUnique)
 				array[count++] = nums[i];
 		}
-
+		
 		int[] uniqueElements = new int[count];
-
-		for (int i = 0; i < count; i++) {
+		for(int i = 0; i < count; i++) {
 			uniqueElements[i] = array[i];
 		}
-
+		
+		
 		return uniqueElements;
 	}
 

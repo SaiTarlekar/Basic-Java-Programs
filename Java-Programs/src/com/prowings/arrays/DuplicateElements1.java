@@ -9,7 +9,7 @@ public class DuplicateElements1 {
 
 	public static void main(String[] args) {
 
-		int[] nums = { 1, 2, 4, 2, 3, 1 };
+		int[] nums = { 4, 5, 6, 5, 4, 8, 5 };
 
 		int[] result = findDuplicateElements(nums);
 		System.out.println(Arrays.toString(result));
@@ -38,6 +38,7 @@ public class DuplicateElements1 {
 				}
 			}
 		}
+		
 
 		return duplicateElements;
 	}

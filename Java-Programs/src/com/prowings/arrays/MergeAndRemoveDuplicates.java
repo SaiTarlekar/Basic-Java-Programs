@@ -89,8 +89,6 @@ public class MergeAndRemoveDuplicates {
 		
 		int[] result = new int[counter];
 		System.arraycopy(mergedArray, 0, result, 0, counter);
-		
-		
 		return result;
 	}
 	

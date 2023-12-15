@@ -5,6 +5,7 @@ package com.prowings.array_assignment;
 import java.util.Arrays;
 import java.util.Scanner;
 
+
 public class ArrayReverse {
 
 	public ArrayReverse() {}
@@ -20,6 +21,7 @@ public class ArrayReverse {
 			nums[i] = scan.nextInt();
 		System.out.println("Reversed Array : " +Arrays.toString(reverseArray(nums)));
 	}
+
 
 	public static int[] reverseArray(int[] nums) {
 		

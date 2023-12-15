@@ -24,10 +24,8 @@ public class UniqueElements {
 					break;
 				}
 			}
-			if (isUnique) {
-				uniqueElements[counter] = currentElement;
-				counter++;
-			}
+			if (isUnique)
+				uniqueElements[counter++] = currentElement;
 		}
 
 		int[] result = new int[counter];
@@ -38,8 +36,10 @@ public class UniqueElements {
 	}
 
 	public static void main(String[] args) {
-		int[] nums = { 1, 1, 2, 5, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5 };
-
+//		int[] nums = { 1, 1, 2, 5, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5 };
+		int[] nums = {3, 5, 6, 3, 7, 5, 5, 3, 3};
+//		[6, 7, 3, 5]
+		
 		int[] result = findUniqueElements(nums);
 		for (int num : result)
 			System.out.print(num + " ");

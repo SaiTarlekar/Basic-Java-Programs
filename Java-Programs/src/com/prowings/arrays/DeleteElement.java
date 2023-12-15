@@ -2,9 +2,9 @@ package com.prowings.arrays;
 
 import java.util.Arrays;
 
-public class DuplicateElement {
+public class DeleteElement {
 
-	public DuplicateElement() {}
+	public DeleteElement() {}
 
 	public static void main(String[] args) {
 
