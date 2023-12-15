@@ -9,7 +9,7 @@ public class ShufflingElements {
 	}
 
 	public static void main(String[] args) {
-		int[] nums = { 1, 2 , 3, 4 };
+		int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9};
 		System.out.println("Shuffled Array  : "+Arrays.toString(doShuffling(nums)));
 	}
 
@@ -17,7 +17,7 @@ public class ShufflingElements {
 
         Random rand = new Random();
         int n = arr.length;
-        for (int i = 0; i < n-1; i++) {
+        for (int i = 0; i < n; i++) {
             int j = rand.nextInt(i+1);
             int temp = arr[i];
             arr[i] = arr[j];
