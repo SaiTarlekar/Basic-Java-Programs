@@ -38,14 +38,8 @@ public class UniqueElements {
 			if(isUnique)
 				array[count++] = nums[i];
 		}
-		
-		int[] uniqueElements = new int[count];
-		for(int i = 0; i < count; i++) {
-			uniqueElements[i] = array[i];
-		}
-		
-		
-		return uniqueElements;
+			
+		return Arrays.copyOf(array, count);
 	}
 
 }
