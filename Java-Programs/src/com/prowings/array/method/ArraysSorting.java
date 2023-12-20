@@ -45,6 +45,10 @@ public class ArraysSorting {
 //		
 //		Arrays.sort(persons, new NameComparator());
 //		System.out.println(Arrays.toString(persons));
+		
+
+		
+		
 	}
 	
 	
