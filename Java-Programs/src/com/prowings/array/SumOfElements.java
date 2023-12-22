@@ -1,4 +1,4 @@
-package com.prowings.array.assignment;
+package com.prowings.array;
 
 public class SumOfElements {
 

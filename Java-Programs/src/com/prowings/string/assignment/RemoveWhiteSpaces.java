@@ -1,6 +1,6 @@
 // Question: Remove all white spaces from a string.
 
-package com.prowings.assignment;
+package com.prowings.string.assignment;
 
 public class RemoveWhiteSpaces {
 

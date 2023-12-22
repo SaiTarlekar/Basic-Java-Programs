@@ -1,39 +1,38 @@
-// Write a Java program to find the maximum and minimum value of an array.
-
 package com.prowings.array;
+
+import java.util.Arrays;
 
 public class MaxAndMin {
 
-	public MaxAndMin() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public static void main(String[] args) {
-
-		int[] nums = {2, 1, 30, 20, 66, 01, -3};
+		int[] nums = {8, 5, 4, 10, 6, 12, 9, 15};
 		
-		int[] result = findMinMax(nums);
-		System.out.println("Maximum : "+result[0]+ "\nMinimum : "+result[1]);
+//		Using Customized Method
+		findMaxMin(nums);
+		
+//		Using Arrays.sort()
+		findMaxMin1(nums);
 	}
 
-	private static int[] findMinMax(int[] nums) {
+	public static void findMaxMin1(int[] nums) {
+		Arrays.sort(nums);
+		System.out.println("Max : " +nums[nums.length-1]);
+		System.out.println("Min : " +nums[0]);
+	}
 
-		int max = nums[0];
-		int min = nums[0];
+	public static void findMaxMin(int[] nums) {
 		
-		for(int i=0; i<nums.length; i++) {
-			if(nums[i] > max)
-				max = nums[i];
-			
-			if(nums[i] < min)
-				min = nums[i];
+		int min = nums[0], max = nums[0];
+	
+		for(int n : nums) {
+			if(min > n)
+				min = n;
+			if(max < n)
+				max = n;
 		}
-		int[] result = new int[2];
-		result[0] = max;
-		result[1] = min;
-		
-		
-		return result;
+
+		System.out.println("Max : " +max);
+		System.out.println("Min : " +min);
 	}
 
 }

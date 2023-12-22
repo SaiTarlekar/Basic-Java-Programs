@@ -1,6 +1,6 @@
 // Output: Remove all duplicate characters from a given string. (I/p : AABCB  O/P : ABC)
 
-package com.prowings.assignment;
+package com.prowings.string.assignment;
 
 import java.util.Arrays;
 

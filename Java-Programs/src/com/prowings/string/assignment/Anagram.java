@@ -1,6 +1,6 @@
 // Question: Check if two strings are anagrams of each other.
  
-package com.prowings.assignment;
+package com.prowings.string.assignment;
 
 public class Anagram {
 

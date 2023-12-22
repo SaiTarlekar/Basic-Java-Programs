@@ -1,43 +1,56 @@
 package com.prowings.array;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class ArrayReversal {
 
-
-	private static Scanner scan = new Scanner(System.in);
-	
-	public ArrayReversal() {
-	}
-	
-	static int[] arrayReversal(int[] array) {
-		
-		int[] reversedArray = new int[array.length];
-		int j=array.length-1;
-		for(int i=0; i<array.length; i++) {
-			reversedArray[j] = array[i];
-			j--;
-		}
-		return reversedArray;
-	}
-
 	public static void main(String[] args) {
-		System.out.println("Enter Size of Array : ");
-		int size = scan.nextInt();
+
+//		Using for Loop
+		System.out.println(Arrays.toString(reverseArray(new int[] {8, 5, 4, 10, 6, 12, 9, 15})));
 		
-		int[] array = new int[size];
-		System.out.println("Enter Numbers : ");
+//		Using while Loop
+		System.out.println(Arrays.toString(reverseArray1(new int[] {8, 5, 4, 10, 6, 12, 9, 15})));
 		
-		for(int i=0; i<size; i++) {
-			System.out.print("array[" +(i+1)+"] : ");
-			array[i] = scan.nextInt();
+//		Using Collections
+		System.out.println(reverseArray2(new int[] {8, 5, 4, 10, 6, 12, 9, 15}));
+	}
+
+	public static List<Integer> reverseArray2(int[] nums) {
+		
+		List<Integer> numbers = new ArrayList<>();
+		for(Integer n : nums)
+			numbers.add(n);
+		Collections.reverse(numbers);
+		return numbers;
+	}
+
+	private static int[] reverseArray1(int[] nums) {
+
+		int i = 0, j = nums.length-1;
+		while(i < j) {
+			int temp = nums[j];
+			nums[j] = nums[i];
+			nums[i] = temp;
+
+			i++; j--;
+			
+		}
+		return nums;
+	}
+
+	private static int[] reverseArray(int[] nums) {
+
+		for(int i=0, j=nums.length-1; i < j; i++, j--) {
+			int temp = nums[i];
+			nums[i] = nums[j];
+			nums[j] = temp;
 		}
 		
-		int[] reversedArray = arrayReversal(array);
-		System.out.println("Reversed Array : ");
-		for(int n:reversedArray) {
-			System.out.print(n+ " ");
-		}
+		return nums;
 	}
 
 }

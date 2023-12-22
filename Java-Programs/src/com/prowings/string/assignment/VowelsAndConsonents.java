@@ -1,4 +1,4 @@
-package com.prowings.assignment;
+package com.prowings.string.assignment;
 
 public class VowelsAndConsonents {
 

@@ -1,6 +1,6 @@
 // Question: Check if a given string is a Palindrome or not
 
-package com.prowings.assignment;
+package com.prowings.string.assignment;
 
 public class PalindromeChecker {
 

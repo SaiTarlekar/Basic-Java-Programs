@@ -1,5 +1,7 @@
 package com.prowings.leetcode.interview;
 
+import java.util.Arrays;
+
 public class RemoveDuplicates {
 
 	public static void main(String[] args) {
@@ -13,24 +15,29 @@ public class RemoveDuplicates {
         
 		
 		int count = 0;
-		int res[] = new int[nums.length];
-	
+		int[] result = new int[nums.length];
 		for(int i=0; i<nums.length; i++) {
+			boolean flag = false;
 			for(int j=i+1; j<nums.length; j++) {
-				if(nums[i] == nums[j])
-					nums[j] = ' ';
+				if(nums[i] == nums[j] && nums[j] != ' ') {
+					nums[j] = '_';
+					flag = true;
+					count++;
+				}
 			}
+			if(flag)
+				result[count-1] = nums[i];
 		}
-		
-		
-		return count;
+		System.out.println(Arrays.toString(result));
+		return nums.length-count;
     }
 }
 
 
 
 /*
- * Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
+
+Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
 
 Consider the number of unique elements of nums to be k, to get accepted, you need to do the following things:
 

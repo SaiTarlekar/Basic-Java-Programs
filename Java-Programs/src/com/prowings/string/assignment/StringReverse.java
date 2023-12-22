@@ -1,7 +1,7 @@
 // Question : Write a program to reverse a given string.
 
 
-package com.prowings.assignment;
+package com.prowings.string.assignment;
 
 public class StringReverse {
 

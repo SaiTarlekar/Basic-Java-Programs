@@ -1,4 +1,4 @@
-package com.prowings.assignment;
+package com.prowings.string.assignment;
 
 import java.util.HashMap;
 import java.util.Scanner;
