@@ -1,5 +1,5 @@
 // Implement a function to rotate elements of an array to the left or right by a certain number of positions.
-package com.prowings.array_assignment;
+package com.prowings.array.assignment;
 
 import java.util.Arrays;
 import java.util.Scanner;

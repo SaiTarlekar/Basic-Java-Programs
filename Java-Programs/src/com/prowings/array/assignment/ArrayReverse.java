@@ -1,6 +1,6 @@
 // Write a function that reverses the elements in an array.
 
-package com.prowings.array_assignment;
+package com.prowings.array.assignment;
 
 import java.util.Arrays;
 import java.util.Scanner;

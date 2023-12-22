@@ -1,4 +1,4 @@
-package com.prowings.array_assignment;
+package com.prowings.array.assignment;
 
 import java.util.Scanner;
 
