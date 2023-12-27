@@ -1,12 +1,17 @@
-package com.prowings.stack;
+package com.prowings.ds.stack;
+
+import java.util.Arrays;
 
 public class Stack {
 
 	
-	final int MAX;
-	int top;
-	int[] a;
+	private final int MAX;
+	private int top;
+	private int[] a;
 	
+	public Stack() {
+		this(10);
+	}
 	
 	public Stack(int size) {
 		this.MAX = size;
@@ -60,6 +65,22 @@ public class Stack {
 			System.out.println(e.getMessage() + " : Element cannot be Popped.");
 			return Integer.MAX_VALUE;
 		}
+	}
+	
+	public String toString() {
+		int[] copy = Arrays.copyOf(a, top+1);
+		return Arrays.toString(copy);
+	}
+	
+	int search(int element) {
+		int distance = 1;
+		for(int i=top; i>=0; i--) {
+			if (element == a[i])
+				return distance;
+			else
+				distance++;
+		}
+		return -1;
 	}
 	
 }

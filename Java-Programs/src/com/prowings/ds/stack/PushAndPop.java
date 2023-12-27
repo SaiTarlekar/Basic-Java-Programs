@@ -1,4 +1,4 @@
-package com.prowings.stack;
+package com.prowings.ds.stack;
 
 public class PushAndPop {
 
