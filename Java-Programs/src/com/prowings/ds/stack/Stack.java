@@ -27,6 +27,9 @@ public class Stack {
 		return top == (MAX-1);
 	}
 
+	void clear() {
+		top = -1;
+	}
 	
 	int peek() {
 		try {
@@ -50,7 +53,7 @@ public class Stack {
 				a[++top] = x;
 			else
 				throw new IndexOutOfBoundsException("Stack Overflow");
-		} catch (Exception e) {
+		} catch (IndexOutOfBoundsException e) {
 			System.out.println(e.getMessage() + " : Element cannot be Pushed.");
 		}
 	}
@@ -61,7 +64,7 @@ public class Stack {
 				return a[top--];
 			else
 				throw new IndexOutOfBoundsException("Stack Underflow");
-		} catch (Exception e) {
+		} catch (IndexOutOfBoundsException e) {
 			System.out.println(e.getMessage() + " : Element cannot be Popped.");
 			return Integer.MAX_VALUE;
 		}
@@ -81,6 +84,11 @@ public class Stack {
 				distance++;
 		}
 		return -1;
+	}
+	
+	public int[] toArray() {
+		int[] copy = Arrays.copyOf(a, top+1);
+		return copy;
 	}
 	
 }
