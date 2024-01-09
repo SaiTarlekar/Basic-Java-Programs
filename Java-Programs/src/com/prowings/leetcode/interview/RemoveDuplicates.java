@@ -7,29 +7,16 @@ public class RemoveDuplicates {
 	public static void main(String[] args) {
 		int[] nums = {0,0,1,1,1,2,2,3,3,4};
 		System.out.println(removeDuplicates(nums));
-		
 	}
 
-		
 	public static int removeDuplicates(int[] nums) {
         
-		
-		int count = 0;
-		int[] result = new int[nums.length];
 		for(int i=0; i<nums.length; i++) {
-			boolean flag = false;
 			for(int j=i+1; j<nums.length; j++) {
-				if(nums[i] == nums[j] && nums[j] != ' ') {
-					nums[j] = '_';
-					flag = true;
-					count++;
-				}
+				
 			}
-			if(flag)
-				result[count-1] = nums[i];
 		}
-		System.out.println(Arrays.toString(result));
-		return nums.length-count;
+		return nums.length;
     }
 }
 

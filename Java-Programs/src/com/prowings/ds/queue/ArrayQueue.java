@@ -45,7 +45,7 @@ public class ArrayQueue<E> extends AbstractQueue<E>{
 
 	@Override
 	public boolean isFull() {
-		return (modCount == MAX);
+		return (size() == MAX);
 	}
 
 	@Override
@@ -71,24 +71,20 @@ public class ArrayQueue<E> extends AbstractQueue<E>{
 	public E dequeue() {
 		if(isEmpty())
 			throw new NoSuchElementException();
-		
 		modCount--;
 		return cast(arrayQueue[front++]);	
 	}
 
 	@Override
 	public E peek() {
-		if(modCount == 0)
-			return null;
-		else
-			return cast(arrayQueue[0]);
+		return isEmpty() ? null :  cast(arrayQueue[front]);
 	}
 
 	@Override
 	public E element() {
 		if(isEmpty())
 			throw new NoSuchElementException();
-		return cast(arrayQueue[0]);
+		return cast(arrayQueue[front]);
 	}
 
 	@Override
@@ -112,7 +108,7 @@ public class ArrayQueue<E> extends AbstractQueue<E>{
 	
 	public <T> T[] toArray(T[] a) {
 		if(a.length < modCount)
-			return cast(Arrays.copyOf(arrayQueue, modCount, a.getClass()));
+			return cast(Arrays.copyOf(arrayQueue, modCount));
 		System.arraycopy(arrayQueue, front, a, 0, modCount);
 		return a;
 	}
@@ -146,6 +142,8 @@ public class ArrayQueue<E> extends AbstractQueue<E>{
 		sb.append("]");
 		return sb.toString();
 	}
+
+	
 }
 
 

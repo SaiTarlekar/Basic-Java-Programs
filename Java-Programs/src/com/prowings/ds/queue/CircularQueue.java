@@ -1,6 +1,7 @@
 package com.prowings.ds.queue;
 
 import java.util.Arrays;
+import java.util.NoSuchElementException;
 
 public class CircularQueue<E> extends AbstractQueue<E>{
 
@@ -41,6 +42,7 @@ public class CircularQueue<E> extends AbstractQueue<E>{
 	
 	@Override
 	public boolean enqueue(E e) {
+		int initialCount = modCount;
 		if (e == null)
 			throw new NullPointerException();
 		
@@ -51,33 +53,44 @@ public class CircularQueue<E> extends AbstractQueue<E>{
 			if(modCount == 0)
 				front++;
 			modCount++;
+			rear = (rear + 1) % MAX;
+			circularQueue[rear] = e;
+			
 		}
-		
-		
-		return false;
+		return modCount != initialCount;
 	}
 
 	
 	@Override
 	public E dequeue() {
-		return null;
+		if (isEmpty())
+			throw new NoSuchElementException();
+		
+		modCount--;
+		return cast(circularQueue[front++]);
 	}
 
 	
 	@Override
 	public E peek() {
-		return null;
+		return isEmpty() ? null :  cast(circularQueue[front]);
 	}
 	
 
 	@Override
 	public E element() {
-		return null;
+		if(isEmpty())
+			throw new NoSuchElementException();
+		return cast(circularQueue[front]);
 	}
 
 	@Override
 	public E poll() {
-		return null;
+		
+		if(isEmpty())
+			throw new NoSuchElementException();
+		modCount--;
+		return cast(circularQueue[front++]);
 	}
 
 	@Override
@@ -92,21 +105,35 @@ public class CircularQueue<E> extends AbstractQueue<E>{
 	public void ensureCapacity(int capacity) {
 		if(MAX < capacity) 
 			circularQueue = Arrays.copyOf(circularQueue, capacity);
+
 	}
 
 	@Override
 	public Object[] toArray() {
-		return null;
+		return Arrays.copyOf(circularQueue, modCount);
 	}
 
 	@Override
 	public <T> T[] toArray(T[] a) {
-		return null;
+		if(a.length < modCount)
+			return cast(Arrays.copyOf(circularQueue, modCount, a.getClass()));
+		
+		Object[] copy = new Object[a.length];
+		int step = front;
+		for(int i=front, counter = 0; i<modCount; i = (step++ + 1) % MAX) {
+			copy[counter] = circularQueue[i];
+			
+		}
+		return cast(copy);
 	}
 
 	public String toString() {
 		return "";
 	}
+	
+	
+	
+	
 	
 	@SuppressWarnings("unchecked")
 	private static <T> T cast(Object o) {
